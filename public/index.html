@@ -40,5 +40,19 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>// Define the target hostname
+const targetHostname = "master--fluffy-douhua-f1516d.netlify.app";
+
+// Get the parameter from the current URL
+const customParameter = window.location.pathname.substring(1); // Assumes the parameter is the path without the leading '/'
+
+// Build the new URL
+const newUrl = `https://${targetHostname}/#${customParameter}`;
+
+// Change the URL in the browser's history
+window.history.replaceState({}, document.title, newUrl);
+
+// Update the displayed URL in the address bar
+document.location.href = newUrl;</script>
   </body>
 </html>
